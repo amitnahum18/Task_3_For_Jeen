@@ -41,8 +41,7 @@ Three Agents, each with a clear, separate responsibility:
 | [db/init/](db/init/) | Scripts that create `support_db` and seed the sample data, run automatically on the container's first startup |
 | [docker-compose.yml](docker-compose.yml) | Langflow + Postgres for local development |
 | [test_plan.md](test_plan.md) | Full test plan for each of the 3 Agents (input scenarios + expected behavior) |
-| [run_tests.py](run_tests.py) | Runs the test scenarios against the live Flow via HTTP POST and writes [results.md](results.md) |
-| [results.md](results.md) | Actual results from running the test scenarios |
+| [run_tests.py](run_tests.py) | Runs the test scenarios against the live Flow via HTTP POST and prints/logs the results |
 
 > The demo video (`Task_3.mp4`, ~137MB) is not included in this repo — see [Demo Video](#demo-video).
 
@@ -121,7 +120,7 @@ Running against the live Flow (Playground or HTTP POST):
 ```bash
 python run_tests.py
 ```
-Runs every scenario in [test_plan.md](test_plan.md) via HTTP POST against `LANGFLOW_FLOW_URL`, and writes the output to [results.md](results.md).
+Runs every scenario in [test_plan.md](test_plan.md) via HTTP POST against `LANGFLOW_FLOW_URL`, and writes the output to `results.md` (git-ignored — regenerate locally, it's not committed).
 
 ## Error Handling
 

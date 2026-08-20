@@ -27,3 +27,6 @@ Thumbs.db
 
 # Video (too large for GitHub, hosted separately)
 *.mp4
+
+# Generated test output (regenerate with run_tests.py)
+results.md
